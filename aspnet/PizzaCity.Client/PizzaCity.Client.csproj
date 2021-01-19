@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\PizzaCity.Domain\PizzaCity.Domain.csproj" />
+    <ProjectReference Include="..\PizzaCity.Storage\PizzaCity.Storage.csproj" />
+    <ProjectReference Include="PizzaCity.Client.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>
