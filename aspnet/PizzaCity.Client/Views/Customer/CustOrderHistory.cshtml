@@ -1,0 +1,61 @@
+@model PizzaCity.Client.Models.CustomerViewModel
+
+@{
+  ViewBag.Title = "Your Order History";
+  Layout = "_Layout";
+}
+<h1>Order History for @TempData.Peek("CustomerName")</h1>
+<section>
+    <ul class = "list-group">
+        @{if(Model.Customer.Orders != null)
+        {
+            @foreach (var item in Model.Customer.Orders)
+            {
+                <li class = "list-group-item" name = "ORDERS"> 
+                    <ul class = "list-group px-1 py-1">
+                        <li class = "list-group-item list-group-item-primary">
+                            Order Time: @item.OrderModified <span class = "tab-space">.      </span> From Store: @item.Store 
+                            <span class = "tab-space">.   </span> Customer Name: @Model.Customer.Name
+                        </li>
+                        <li class = "list-group-item px-1 py-1">
+                            Your Total is: $ @item.Price
+                        </li>
+                        @foreach (var pizza in item.Pizzas)
+                        {
+                            <li class = "list-group-item" name = "PIZZAS"> 
+                                <ul class = "list-group px-1 py-1" name = "pizza_detail">
+                                    <li class = "list-group-item list-group-item-secondary">
+                                        Pizza Details: @pizza.Name
+                                    </li>
+                                    <li class = "list-group-item border-0 px-1 py-1">
+                                        Crust: @pizza.Crust.Name <span class = "tab-space">.      </span> Size: @pizza.Size.Name
+                                    </li>
+                                    <li class = "list-group-item border-0 px-1 py-1">
+                                        Toppings: 
+                                        @{foreach (var topping in pizza.Toppings)
+                                        {
+                                            <span> @topping.Name,  </span> 
+                                        }
+                                        }
+                                    </li>
+                                    <li class = "list-group-item px-1 py-1">
+                                        Pizza Price:$ @pizza.Price
+                                    </li>
+                                </ul>
+                            </li>
+                        }
+                    </ul>
+                </li>
+            }
+        }
+        else
+        {
+            <p>NO ORDERS YET! GET SHOPPING!!!!</p>
+        }
+
+        }
+    </ul>
+
+
+    <p>Thank you and Come Again!</p>
+</section>

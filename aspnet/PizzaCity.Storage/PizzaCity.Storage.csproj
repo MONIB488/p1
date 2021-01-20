@@ -2,8 +2,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PizzaCity.Domain\PizzaCity.Domain.csproj" />
-    <ProjectReference Include="..\PizzaCity.Client\PizzaCity.Client.csproj" />
-    <ProjectReference Include="PizzaCity.Storage.csproj" />
+    
+   
   </ItemGroup>
 
   <ItemGroup>

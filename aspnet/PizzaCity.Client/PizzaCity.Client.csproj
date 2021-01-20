@@ -3,7 +3,7 @@
   <ItemGroup>
     <ProjectReference Include="..\PizzaCity.Domain\PizzaCity.Domain.csproj" />
     <ProjectReference Include="..\PizzaCity.Storage\PizzaCity.Storage.csproj" />
-    <ProjectReference Include="PizzaCity.Client.csproj" />
+    
   </ItemGroup>
 
   <PropertyGroup>

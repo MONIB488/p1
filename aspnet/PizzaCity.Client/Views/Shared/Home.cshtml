@@ -1,0 +1,13 @@
+@model PizzaCity.Client.Models.CustomerViewModel
+
+@{
+  ViewBag.Title = "Customer - Home";
+  Layout = "_Layout";
+  TempData.Put("Customer",Model.Customer);
+}
+
+<section>
+  <h2>Welcome @Model.Name !</h2>
+</section>
+
+@Html.Partial("ChooseStore", Model)

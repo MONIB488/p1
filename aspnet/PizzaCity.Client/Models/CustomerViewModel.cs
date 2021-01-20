@@ -1,40 +1,23 @@
-using System;
-using System.Linq;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using PizzaCity.Domain.Models;
-using PizzaCity.Storing;
-using PizzaCity.Client.Models;
+using Microsoft.Extensions.Configuration;
 
-namespace PizzaCity.Client.Controllers
+namespace PizzaCity.Client.Models
 {
-  public class OrderController : Controller
+  public class CustomerViewModel
   {
-    private readonly PizzaCityContext _ctx;
-    public OrderController(PizzaCityContext context)
+    public string Name { get; set; }
+    public OrderViewModel Order { get; set; }
+    public Customer Customer {get; set;}
+    public List<Customer> Customers {get; set;}
+    public StoreViewModel StoreView {get; set;}
+    public string store {get; set;}
+
+    public CustomerViewModel()
     {
-      _ctx = context;
-    }
-
-    [HttpPost]
-    [ValidateAntiForgeryToken]
-    public IActionResult Post(OrderViewModel model)
-    {
-      if (ModelState.IsValid)
-      {
-        var order = new Order()
-        {
-          DateModified = DateTime.Now,
-          Store = _ctx.Stores.FirstOrDefault(s => s.Name == model.Store)
-        };
-
-        _ctx.Orders.Add(order);
-        _ctx.SaveChanges();
-
-        return View("OrderPlaced");
-      }
-
-      return View("home", model);
+      Name = "Monica";
+      Order = new OrderViewModel();
     }
   }
 }
