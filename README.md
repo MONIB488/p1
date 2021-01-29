@@ -1,6 +1,9 @@
 # P1-PizzaCity
 
+Project Description
 The goal of the project is to build a Pizza Ordering System.
+
+Technologies Used
 
 architecture (REQUIRED)
 [solution] PizzaCity.sln
