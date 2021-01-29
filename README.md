@@ -1,5 +1,5 @@
-# p1
-pizzacity
+# P1-PizzaCity
+
 The goal of the project is to build a Pizza Ordering System.
 
 architecture (REQUIRED)
