@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using PizzaCity.Storage;
@@ -7,7 +6,7 @@ using PizzaCity.Client.Models;
 
 namespace PizzaCity.Client.Controllers
 {
-  [Route("[controller]")]
+  
   public class CustomerController : Controller
   {
     private readonly PizzaCityRepo _repo;
@@ -15,8 +14,8 @@ namespace PizzaCity.Client.Controllers
     {
       _repo = repository;
     }
-    [Route("")]
-    [Route("[action]")]
+    
+    
 
     [HttpGet]
     public IActionResult Home()
@@ -37,10 +36,10 @@ namespace PizzaCity.Client.Controllers
         Toppings = _repo.ReadToppings().ToList()
       };
 
-      return View("HOME", customer);
+      return View("Home", customer);
     }
 
-    [Route("[action]")]
+    
     [HttpGet]
     public IActionResult CustomerOrderHistory()
     {

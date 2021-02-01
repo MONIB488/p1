@@ -7,17 +7,17 @@ using PizzaCity.Storage;
 namespace PizzaCity.Client.Controllers
 {
     
-    [Route("[controller]")]
+    
     public class StoreController : Controller
     {
         
-        private readonly PizzaCityRepo _ctx;
+        private readonly PizzaCityRepo _repo;
 
-        public StoreController(PizzaCityRepo context)
+        public StoreController(PizzaCityRepo repo)
         {
-            _ctx = context;
+            _repo = repo;
         }
-        [Route("[action]")]
+        
         [HttpGet]
         public IActionResult StoreList()
         {
@@ -30,16 +30,16 @@ namespace PizzaCity.Client.Controllers
             TempData["Stores"]= stores.Stores;
             return View("Store",new StoreViewModel());
         }
-        [Route("[action]")]
+        
         [HttpGet]
         public IActionResult SelectStore()
         {
             StoreViewModel model = new StoreViewModel();
-            model.Stores = _ctx.GetStores();
+            model.Stores = _repo.GetStores();
 
             return View("SelectStore",model);
         }
-        [Route("[action]")]
+        
         [HttpPost]
         public IActionResult PostStore(StoreViewModel model)
         {
@@ -47,13 +47,13 @@ namespace PizzaCity.Client.Controllers
             return View("StoreHome",model);
         }
 
-        [Route("[action]")]
+        
         [HttpGet]
         public IActionResult StoreHistory()
         {
             StoreViewModel model = new StoreViewModel();
             model.ChosenStore = TempData.Peek("ChosenStore") as string;
-            model.StoreOrderHistory = _ctx.StoreOrders(model.ChosenStore).ToList();
+            model.StoreOrderHistory = _repo.StoreOrders(model.ChosenStore).ToList();
             double total = 0;
             foreach (var item in model.StoreOrderHistory)
             {

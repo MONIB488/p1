@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Newtonsoft.Json;
 
-namespace PizzaBox.Client.PersistData
+namespace PizzaCity.Client.PersistData
 {
     public static class TempDataExtension
     {

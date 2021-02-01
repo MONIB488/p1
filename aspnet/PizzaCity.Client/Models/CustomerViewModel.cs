@@ -13,6 +13,7 @@ namespace PizzaCity.Client.Models
     public List<Customer> Customers {get; set;}
     public StoreViewModel StoreView {get; set;}
     public string store {get; set;}
+    public PizzaViewModel PizzaView{get; set;}
 
     public CustomerViewModel()
     {

@@ -1,0 +1,19 @@
+@using PizzaCity.Client.PersistData
+@model PizzaCity.Client.Models.CustomerViewModel
+
+@{
+  TempData.Put<CustomerViewModel>("Customer", @Model);
+}
+
+<div class="row">
+  <form asp-action="pizza" asp-controller="order" asp-antiforgery="true" method="GET">
+    @foreach (var item in Model.Order.Store)
+    {
+      <div class="col-12 m-2">
+        <input type="radio" asp-for="@Model.Order.Store" value="@item" id="@item" required>
+        <label for="@item">@item</label>
+      </div>
+    }
+    <button type="submit" class="btn btn-primary">Select Store</button>
+  </form>
+</div>

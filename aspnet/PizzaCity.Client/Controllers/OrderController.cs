@@ -18,7 +18,6 @@ namespace PizzaCity.Client.Controllers
     }
 
     [HttpGet]
-    [Route("action]")]
     public IActionResult ReviewOrder(OrderViewModel model)
     {
       var order = _repo.GetPrevOrder();
@@ -47,7 +46,7 @@ namespace PizzaCity.Client.Controllers
     }
 
     [HttpGet]
-    [Route("[action]")]
+   
     public IActionResult CompleteOrder(OrderViewModel model)
     {
       model.CustomerName = TempData.Peek("CustomerName") as string;
@@ -55,7 +54,7 @@ namespace PizzaCity.Client.Controllers
     }
 
     [HttpGet]
-    [Route("action")]
+    
     public IActionResult OrderPizza()
     {
       var o = new OrderViewModel()
@@ -86,11 +85,11 @@ namespace PizzaCity.Client.Controllers
         return View("OrderPlaced",model);
       }
 
-      return View("HOME", model);
+      return View("Home", model);
 
     }
 
-    [Route("[action]")]
+    
     [HttpPost]
     public IActionResult AddPizza(OrderViewModel model)
     {
@@ -142,7 +141,7 @@ namespace PizzaCity.Client.Controllers
 
       }
 
-      return View("HOME", model);
+      return View("Home", model);
     }
   }
 }

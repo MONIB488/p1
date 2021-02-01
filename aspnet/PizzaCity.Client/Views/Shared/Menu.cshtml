@@ -1,51 +1,23 @@
-@model PizzaCity.Client.Models.OrderViewModel
+@using PizzaCity.Client.PersistData
+@model PizzaCity.Client.Models.CustomerViewModel
 
 @{
-  ViewBag.Title = "Order - Menu";
-  Layout = "_Layout";
-  TempData.Put("PizzaList",Model.PizzaView);
+  ViewBag.Title = "Customer - Main Menu";
+  Layout = "_CustomLayout";
+  TempData.Put<CustomerViewModel>("Customer", @Model);
 }
 
 <section>
-  <h2>Welcome to Store @TempData.Peek("StoreName") !</h2>
+  <h1>Welcome, @Model.Name</h1>
 </section>
 
-<div class="container">
-    <div class = "row">
-        <div class = "col">
-            <div class="card-deck">
-                <div class="card text-center">
-                    <div class="card-body justify-content-center align-self-center">
-                        <h5 class="card-title">Choose a Pizza</h5>
-                        <p class="card-text"></p>
-                        <a class="btn btn-primary" asp-area="" asp-controller="Order" asp-action="OrderPizza">Prebuilt Pizza</a>
-                    </div>
+<div class="row">
+    <form asp-controller="customer" asp-action="menu" method="GET">
+                <div class="col-12 m-2">
+                    <button type="submit" class="btn btn-primary" name="button" value="order">Place Order</button>
                 </div>
-                <div class="card text-center">
-                    <img class="card-img-top" src="https://media.discordapp.net/attachments/796065919935840276/800856825305366588/CheckMark.png" 
-                    style="width:100%;height:50%;" alt="Check Out">
-                    <div class="card-body justify-content-center align-self-center">
-                        <h5 class="card-title">Check Out</h5>
-                        <p class="card-text"></p>
-                        <a class="btn btn-primary" asp-area="" asp-controller="Order" asp-action="OrderComplete">Check Out</a>
-                    </div>
-                </div>
-                <div class="card text-center">
-                    <div class="card-body justify-content-center align-self-center">
-                        <h5 class="card-title">Order History</h5>
-                        <p class="card-text"></p>
-                        <a class="btn btn-primary" asp-area="" asp-controller="Customer" asp-action="CustOrderHistory">Order History</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-  @* <div class="row row-equal-height" > *@
-    
-        <div class = "col-3">
-            @Html.Partial("OrderReview",Model)
-        </div>
 
-        
-    
-  </div>
-</div>
+                <div class="col-12 m-2">
+            <button type="submit" class="btn btn-danger" name="button" value="quit">Log out</button>
+        </div>
+    </form>      

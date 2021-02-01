@@ -15618,13 +15618,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/home/monib488/Revature/Projects/p1/aspnet/PizzaCity.Client/Views/Order.cshtml",
-      "TargetPath": "Views\\Order.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/monib488/Revature/Projects/p1/aspnet/PizzaCity.Client/Views/Pizza.cshtml",
-      "TargetPath": "Views\\Pizza.cshtml",
+      "FilePath": "/home/monib488/Revature/Projects/p1/aspnet/PizzaCity.Client/Views/Shared/ChooseStore.cshtml",
+      "TargetPath": "Views\\Shared\\ChooseStore.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15643,8 +15638,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/home/monib488/Revature/Projects/p1/aspnet/PizzaCity.Client/Views/Store.cshtml",
-      "TargetPath": "Views\\Store.cshtml",
+      "FilePath": "/home/monib488/Revature/Projects/p1/aspnet/PizzaCity.Client/Views/Shared/PizzaOrder.cshtml",
+      "TargetPath": "Views\\Shared\\PizzaOrder.cshtml",
       "FileKind": "mvc"
     },
     {

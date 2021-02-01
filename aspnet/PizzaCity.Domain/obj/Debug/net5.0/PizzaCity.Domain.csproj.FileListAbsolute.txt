@@ -3,3 +3,10 @@
 /home/monib488/Revature/Projects/p1/aspnet/PizzaCity.Domain/obj/Debug/net5.0/PizzaCity.Domain.AssemblyInfoInputs.cache
 /home/monib488/Revature/Projects/p1/aspnet/PizzaCity.Domain/obj/Debug/net5.0/PizzaCity.Domain.AssemblyInfo.cs
 /home/monib488/Revature/Projects/p1/aspnet/PizzaCity.Domain/obj/Debug/net5.0/PizzaCity.Domain.csproj.CoreCompileInputs.cache
+/home/monib488/Revature/Projects/p1/aspnet/PizzaCity.Domain/bin/Debug/net5.0/PizzaCity.Domain.deps.json
+/home/monib488/Revature/Projects/p1/aspnet/PizzaCity.Domain/bin/Debug/net5.0/PizzaCity.Domain.dll
+/home/monib488/Revature/Projects/p1/aspnet/PizzaCity.Domain/bin/Debug/net5.0/ref/PizzaCity.Domain.dll
+/home/monib488/Revature/Projects/p1/aspnet/PizzaCity.Domain/bin/Debug/net5.0/PizzaCity.Domain.pdb
+/home/monib488/Revature/Projects/p1/aspnet/PizzaCity.Domain/obj/Debug/net5.0/PizzaCity.Domain.dll
+/home/monib488/Revature/Projects/p1/aspnet/PizzaCity.Domain/obj/Debug/net5.0/ref/PizzaCity.Domain.dll
+/home/monib488/Revature/Projects/p1/aspnet/PizzaCity.Domain/obj/Debug/net5.0/PizzaCity.Domain.pdb

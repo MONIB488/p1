@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using PizzaCity.Domain.Models;
 using PizzaCity.Domain.Abstracts;
 using System.Collections.Generic;
@@ -16,12 +15,11 @@ namespace PizzaCity.Storage
     public DbSet<Crust> Crusts{get; set;}
     public DbSet<Size> Sizes{get; set;}
     public DbSet<Toppings> Toppings{get; set;}
-
-
     public PizzaCityContext(DbContextOptions<PizzaCityContext> options) : base(options) { }
     protected override void OnConfiguring(DbContextOptionsBuilder builder)
     {
-      builder.UseSqlServer("Server=tcp:monicap1.database.windows.net;Initial Catalog=PizzaCity-P1;Persist Security Info=False;User ID=sqladmin;Password={Katsuki8991*};");
+      builder.UseSqlServer("Server=tcp:monicap1.database.windows.net;Initial Catalog=PizzaCity-P1;User ID=sqladmin;Password={Katsuki8991*};");
+    
     }
 
     protected override void OnModelCreating(ModelBuilder builder)
